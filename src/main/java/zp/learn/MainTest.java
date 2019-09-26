@@ -2,8 +2,6 @@ package zp.learn;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import zp.learn.bean.Person;
 import zp.learn.config.MainConfig;
 
 /**
@@ -15,8 +13,7 @@ public class MainTest {
     public static void main(String[] args) {
 //        ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:beans.xml");
         ApplicationContext ac = new AnnotationConfigApplicationContext(MainConfig.class);
-        Person person = (Person) ac.getBean("person");
-        System.out.println(person);
+        System.out.println(ac.getBeanDefinitionCount());
 
     }
 }
