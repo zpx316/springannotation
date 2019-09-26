@@ -10,6 +10,16 @@ public class Car {
     private String name ;
     private String color ;
 
+    public void init(){
+
+        System.out.println("car初始化方法被调用");
+    }
+
+    public void destroy(){
+        System.out.println("car销毁方法被调用");
+
+    }
+
     public String getName() {
         return name;
     }
