@@ -1,12 +1,14 @@
 package zp.learn.bean;
 
+import org.springframework.beans.factory.annotation.Value;
+
 /**
  * @author zp
  * @Description:
  * @date 2019-09-24 17:58
  */
 public class Person {
-
+    @Value("${person.name}")
     private String name ;
 
     private Integer age ;
